@@ -116,7 +116,7 @@ public class SinglyLinkedList implements LinkedList {
     public Object get(int index) {
         // TODO digunakan untuk mengembalikan data pada index ke-i dimulai dari head. Head memiliki index 0
         if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+            return null;
         }
 
         Node current = head;

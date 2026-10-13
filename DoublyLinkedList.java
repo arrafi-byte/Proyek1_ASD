@@ -152,10 +152,12 @@ public class DoublyLinkedList implements LinkedList{
     public void printReverse() {
         // TODO digunakan untuk mencetak data pada linked list dengan urutan terbalik, dari tail ke head.
         Node2P temp = tail;
-        for(int i=0;i<size;i++){
-            System.out.println(temp.data+",");
+        for(int i=0;i<size-1;i++){
+            System.out.print(temp.data+",");
                 temp=temp.prev;
         }
+        System.out.print(head.data);
+        System.out.println("");
         
     }
     @Override

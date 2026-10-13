@@ -12,13 +12,19 @@ public class testSinglyLinkedList {
         linkedList.addFirst(4);
         linkedList.addFirst(5);
         linkedList.addFirst(6);
-        System.out.println(linkedList.get(2)); // menghasilkan nilai 3
-        System.out.println(linkedList.get(12)); //Terjadi exception error
-        System.out.println(linkedList.indexOf(4));// menghasilkan 5
+        System.out.println(linkedList.get(2)); // menghasilkan nilai 3 > menghasilkan 4 karena input addfirst
+        System.out.println(linkedList.get(12)); //Terjadi exception error > null
+        System.out.println(linkedList.indexOf(4));// menghasilkan 5 > menghasilkan 2 karena input addfirst
         System.out.println(linkedList.indexOf(10));// menghasilkan -1
-        linkedList.printReverse(); // Menghasilkan 6,5,4,3,2,1
+        linkedList.printReverse(); // Menghasilkan 6,5,4,3,2,1 > menghasilkan 1,2,3,4,5,6 karena input addfirst
         System.out.println(linkedList.remove(3)); // Menghasilkan True
         System.out.println(linkedList.remove(8)); // Menghasilkan False
-        System.out.println(linkedList.toArray()); //Menghasilkan [6,5,4,3,2,1]
+        Object[] data = linkedList.toArray();
+        System.out.print("[");
+        for (int i=0;i<data.length;i++) {
+            System.out.print(data[i] + ",");
+        }
+        System.out.print("]");
+        System.out.println(); //Menghasilkan [6,5,4,3,2,1]
     }
 }
